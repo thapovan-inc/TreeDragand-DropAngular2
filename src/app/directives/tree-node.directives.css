@@ -1,0 +1,25 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+
+.tree-node {
+  padding:5px;
+  border-bottom: 1px solid #dae2ea;
+  color: #7c9eb2;
+  margin:5px;
+}
+.editable{
+  right: 25px;
+  display: inline-block;
+  position: absolute;
+}
+
+.glyphicon-plus {
+  color:green;
+}
+
+.glyphicon-minus {
+  color:red;
+}

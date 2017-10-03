@@ -1,0 +1,17 @@
+<ul>
+  <li *ngFor="let child of children | nodeSearchPipe">
+    <div class='tree-node' pDroppable="dd"  pDraggable="dd" (onDragEnd)='onDragEnd($event,child)' (onDragStart)='onDragStart($event,child,children)' (onDrop)='onDrop($event,child)'>
+      <i  class='fa' *ngIf='hasChevronDown(child)' [ngClass]="customClasses.chevronDownIcon || 'glyphicon glyphicon-chevron-down'" (click)='toggle(child)'></i>
+      <i  class='fa' *ngIf='hasChevronRight(child)' [ngClass]="customClasses.chevronRightIcon || 'glyphicon glyphicon-chevron-right'" (click)='toggle(child)'></i>
+      <app-editable-text [node]="child"></app-editable-text>
+      <span class="editable">
+      <i (click)='deleteNode(child)' [ngClass]="customClasses.minusIcon || 'glyphicon glyphicon-plus pull-right'"></i>
+      <i (click)='addNewNode(child)' [ngClass]="customClasses.plusIcon || 'glyphicon glyphicon-minus pull-right'"></i>
+      </span>
+    </div>
+    <div *ngIf="child.expanded">
+      <app-tree-node [customClasses]='customClasses' [children]='child.subNodes'></app-tree-node>
+    </div>
+  </li>
+</ul>
+

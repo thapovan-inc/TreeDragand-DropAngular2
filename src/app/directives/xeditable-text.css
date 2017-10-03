@@ -1,0 +1,8 @@
+div{
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+}
+.proj-name{}
+.weightage{position: absolute; right: 30%;}
+.skillset{position: absolute; right: 15%;}

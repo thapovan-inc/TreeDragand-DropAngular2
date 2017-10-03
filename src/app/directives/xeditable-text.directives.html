@@ -1,0 +1,14 @@
+<div class="proj-name">   
+<span *ngIf='isEditable'> <input type='text' (blur)="setEditable(false)" [(ngModel)]='node.text' (keyup.enter)="setEditable(false)"> </span>
+<span *ngIf='!isEditable' (click)='setEditable(true)'> {{node.text}} </span>
+</div>
+<div class="weightage">
+<span *ngIf='isEditable'> <input type='text' (blur)="setEditable(false)" [(ngModel)]='node.weight' (keyup.enter)="setEditable(false)"> </span>
+<span *ngIf='!isEditable' (click)='setEditable(true)'> {{node.weight}} </span>
+</div>
+<div class="skillset">
+<span *ngIf='isEditable'> <input type='text' (blur)="setEditable(false)" [(ngModel)]='node.skillset' (keyup.enter)="setEditable(false)"> </span>
+<span *ngIf='!isEditable' (click)='setEditable(true)'> {{node.skillset}} </span>
+</div>
+
+
